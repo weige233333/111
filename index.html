@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="Liom6DWlU3nrBFqiAWJVWZ">
+<head data-page-node-id="VwHEiaUWgPbHdc1DF3pb0D">
+  <meta charset="UTF-8" data-page-node-id="bDsKxoifQU5pNTHjf5G7ii" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="YfVsVjByRqaRc4Ez4JaMCu" />
+  <title>俄罗斯方块 · Tetris</title>
+  <link rel="stylesheet" href="style.css" data-page-node-id="97ZSE3pPubO7Y1n5z4IDYX" />
+</head>
+<body data-page-node-id="G4I3aTOSOAISk1xyqMiANF">
+  <!-- 整体游戏容器 -->
+  <main class="game-container" data-page-node-id="uS66D9SWIsraznFY3r2BkS">
+
+    <!-- 左侧：HOLD 画布 + 分数面板 -->
+    <aside class="side-panel left-panel" data-page-node-id="vgaA12nKvyUaPYkUjAgrNI">
+      <!-- Hold 方块预览 -->
+      <section class="panel-box" data-page-node-id="bS84ZzWjcJBy7VhOipsWzE">
+        <h2 class="panel-title" data-page-node-id="reCNXQWgLFuxsFVrbmiFl5">HOLD</h2>
+        <canvas id="hold-canvas" class="hold-canvas" width="160" height="160" data-page-node-id="r9ywP4TKZi4qLNBrz3mqls"></canvas>
+      </section>
+
+      <!-- 分数面板 -->
+      <section class="panel-box" data-page-node-id="ZnVb9gCGFHk3UvUI4FVSsb">
+        <h2 class="panel-title" data-page-node-id="vOl7LBNzIYlllLCJgONCJA">SCORE</h2>
+        <ul class="score-list" data-page-node-id="iHPl2YmvC02VDDTBl3SRLF">
+          <li data-page-node-id="RUD4jHGauHrAxUclbPvUWw"><span class="score-label" data-page-node-id="vt5OuTIXECf120YoyQVbKw">分数</span><span id="score" class="score-value" data-page-node-id="3qZguK53U6peoMqKTBgYzt">0</span></li>
+          <li data-page-node-id="QkPqbBRmYeRvaEYyQb0AUU"><span class="score-label" data-page-node-id="kyAe5G5NDGedVH68OQAhj0">消行</span><span id="lines" class="score-value" data-page-node-id="oM2AwiVPFjitDKvcj70Xcc">0</span></li>
+          <li data-page-node-id="Mr2D35CvkE5RCBZtvUMFnE"><span class="score-label" data-page-node-id="0E7PaFYR8uba6aDqgNFKQ9">等级</span><span id="level" class="score-value" data-page-node-id="5C0vXG4QTGKl8smzB8T9gu">1</span></li>
+        </ul>
+      </section>
+    </aside>
+
+    <!-- 中间：主游戏画布 -->
+    <section class="main-panel" data-page-node-id="6crgmAx3C5drv3UrlnxEgC">
+      <canvas id="board-canvas" class="board-canvas" width="300" height="600" data-page-node-id="ZYceQWpLGJppJeSp3DbIl9"></canvas>
+    </section>
+
+    <!-- 右侧：下一个方块预览 -->
+    <aside class="side-panel right-panel" data-page-node-id="FdUTlIMStH661iCsutctlZ">
+      <section class="panel-box" data-page-node-id="WncSJojCqo1mkPMmDsidEM">
+        <h2 class="panel-title" data-page-node-id="k0rn57WGDRQmC0NZy7I0M9">NEXT</h2>
+        <canvas id="next-canvas" class="next-canvas" width="160" height="160" data-page-node-id="TqEDhLl82zhFlcP7CBIDBg"></canvas>
+      </section>
+    </aside>
+
+  </main>
+
+  <!-- 游戏脚本：包含 Board / Piece / Game 三个类 -->
+  <script src="game.js"></script>
+</body>
+</html>

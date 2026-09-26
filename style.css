@@ -1,0 +1,111 @@
+/* ============================================================
+   俄罗斯方块 · 暗色主题样式
+   布局：HOLD / 分数（左） + 主画布（中） + NEXT（右）
+   ============================================================ */
+
+/* 基础重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 页面：暗色背景 + 居中布局 */
+html, body {
+  height: 100%;
+  background: #0f1117;
+  color: #e6e6e6;
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* 游戏整体容器：横向三段式布局 */
+.game-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 24px;
+  background: #161922;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* 侧边栏通用样式 */
+.side-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 面板容器（HOLD / NEXT / 分数） */
+.panel-box {
+  background: #1d2230;
+  border: 1px solid #2a3142;
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+}
+
+/* 面板标题 */
+.panel-title {
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #8a93a8;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+/* 主画布样式 */
+.main-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.board-canvas {
+  background: #0b0d13;
+  border: 2px solid #2a3142;
+  border-radius: 8px;
+}
+
+/* 预览画布（HOLD / NEXT） */
+.hold-canvas,
+.next-canvas {
+  background: #0b0d13;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* 分数列表 */
+.score-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.score-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.score-label {
+  font-size: 11px;
+  color: #8a93a8;
+  letter-spacing: 1px;
+}
+
+.score-value {
+  font-size: 22px;
+  font-weight: 700;
+  color: #4fd1c5;
+  font-variant-numeric: tabular-nums;
+}
